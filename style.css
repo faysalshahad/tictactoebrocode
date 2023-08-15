@@ -1,0 +1,78 @@
+body{
+    background-color: #7EAA92;
+    margin: 0%;
+}
+
+.cell{
+    width: 7rem;
+    height: 7rem;
+    border: 2px solid;
+    line-height: 7rem;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+#cellContainer{
+    display: grid;
+    /*This will repeat the columns three times to shape it like tic tac toe board*/
+    grid-template-columns: repeat(3, auto);
+    width: 20rem;
+    margin: auto;
+
+}
+
+/*Getting rid of the top borders around the edges of the tic tac toe board*/
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+/*Getting rid of the borders from left side of the tic tac toe board*/
+.cell:nth-child(3n + 1){
+    border-left: none;
+}
+
+/*Getting rid of the borders from right side of the tic tac toe board*/
+.cell:nth-child(3n + 3){
+    border-right: none;
+}
+
+/*Getting rid of the bottom borders around the edges of the tic tac toe board*/
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+    border-bottom: none;
+}
+
+#gameContainer{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+
+}
+
+h1{
+    font-size: 4rem;
+    color: #B70404;
+    margin: 1.5%;
+}
+
+h2{
+    font-size: 3rem;
+    color: #3E001F;
+    margin: 1.5%;
+}
+
+#restartBtn{
+    font-size: 2.5rem;
+    background-color: #E9B384;
+    border: 3px solid brown;
+    padding: .25rem .5rem;
+    cursor: pointer;
+}
+
+#restartBtn:hover{
+    background-color: brown;
+    border: 3px solid black;
+    color: black;
+}
